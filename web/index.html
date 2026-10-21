@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Offline-first inventory, billing and reports for motor parts shops.">
+  <title>Motor Parts Manager</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="auth" class="auth-shell"></div>
+  <div id="app" class="app-shell" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Motor Parts Manager home">
+        <span class="brand-mark">MP</span>
+        <span><strong>Motor Parts</strong><small>MANAGER</small></span>
+      </a>
+      <nav id="navigation" class="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom">
+        <div id="connection-state" class="connection-state"></div>
+        <button id="logout-button" class="nav-button quiet" type="button"><span>↪</span> Log out</button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div><p class="eyebrow" id="today-label"></p><h1 id="page-title">Dashboard</h1></div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="alerts-button" type="button" aria-label="Open notifications">♢<span id="alert-count" class="badge" hidden>0</span></button>
+          <div id="user-chip" class="user-chip"></div>
+        </div>
+      </header>
+      <section id="content" class="content" tabindex="-1"></section>
+    </main>
+  </div>
+  <div id="dialog-root"></div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="domain.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
