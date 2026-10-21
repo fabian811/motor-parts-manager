@@ -1,6 +1,6 @@
 # Motor Parts Manager (HTML, CSS and JavaScript)
 
-This is the offline-first web/PWA implementation of Motor Parts Manager. It is separate from the existing Android Studio project in the parent folder; the Android source has not been replaced. A web app cannot be packaged as the requested native APK without an additional wrapper/build process.
+This is the offline-first web/PWA implementation of Motor Parts Manager. It lives in `web/` and is separate from the native Android Studio project in `app/` at the repository root; the two apps do not share data. A web app cannot be packaged as a native APK without an additional wrapper/build process.
 
 ## Run locally
 
